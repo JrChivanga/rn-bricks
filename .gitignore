@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+.yarn/
+bun.lockb
+
+# TypeScript
+*.tsbuildinfo
+
+# Build output
+dist/
+build/
+lib/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Env
+.env
+.env.local
