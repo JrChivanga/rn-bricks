@@ -602,9 +602,9 @@ export default function ProfileScreen() {
 
 ## Requirements
 
-- Expo SDK 55+
-- React Native 0.83+
-- React 19+
+- React Native 0.60+
+- React 16.8+
+- TypeScript (optional but recommended)
 
 ## License
 
