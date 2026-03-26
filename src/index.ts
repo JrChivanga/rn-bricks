@@ -17,4 +17,4 @@ export { Center } from "./widgets/center";
 export { Padding } from "./widgets/padding";
 export { Opacity } from "./widgets/opacity";
 export { AspectRatio } from "./widgets/aspect-ratio";
-export { FloatingActionButton } from "./widgets/floating-action-button"
+export { FloatingActionButton } from "./widgets/floating-action-button";
