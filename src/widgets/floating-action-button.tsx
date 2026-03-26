@@ -14,7 +14,7 @@ type FloatingActionButtonProps = {
    * The icon or widget to display inside the button.
    * For the `extended` variant, displayed to the left of the label.
    */
-  child?: React.ReactNode;
+  children?: React.ReactNode;
 
   /**
    * Label text displayed next to the icon.
@@ -128,7 +128,7 @@ const defaultShadow = {
  */
 export function FloatingActionButton({
   onPress,
-  child,
+  children,
   label,
   variant = "regular",
   backgroundColor = "#6750A4",
@@ -168,7 +168,7 @@ export function FloatingActionButton({
         style,
       ]}
     >
-      {child}
+      {children}
       {variant === "extended" && label ? <Text style={labelStyle}>{label}</Text> : null}
     </Pressable>
   );
