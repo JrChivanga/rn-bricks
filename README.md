@@ -270,6 +270,65 @@ import { Stack, Positioned } from 'rn-bricks';
 
 ---
 
+### `FloatingActionButton`
+ 
+A circular (or pill-shaped) button that floats above the UI, representing the primary action of a screen. Equivalent to Flutter's `FloatingActionButton` widget, including the `mini` and `extended` variants.
+ 
+Use inside a `Stack` + `Positioned` to pin it to a corner of the screen.
+ 
+```tsx
+import { FloatingActionButton } from 'rn-bricks';
+ 
+// Regular FAB pinned to the bottom right
+<Stack style={{ flex: 1 }}>
+  <ScreenContent />
+  <Positioned bottom={24} right={24}>
+    <FloatingActionButton onPress={handleAdd}>
+      <PlusIcon color="white" size={24} />
+    </FloatingActionButton>
+  </Positioned>
+</Stack>
+ 
+// Mini variant
+<FloatingActionButton variant="mini" onPress={handleEdit}>
+  <EditIcon color="white" size={16} />
+</FloatingActionButton>
+ 
+// Extended FAB with icon and label
+<FloatingActionButton
+  variant="extended"
+  label="New post"
+  onPress={handleCreate}
+>
+  <PlusIcon color="white" size={20} />
+</FloatingActionButton>
+ 
+// Custom colours
+<FloatingActionButton
+  backgroundColor="#E8DEF8"
+  foregroundColor="#21005D"
+  onPress={handleShare}
+>
+  <ShareIcon size={24} />
+</FloatingActionButton>
+```
+ 
+**FloatingActionButton props:**
+ 
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `onPress` | `() => void` | — | Called when the button is pressed |
+| `child` | `ReactNode` | — | Icon or widget displayed inside the button |
+| `label` | `string` | — | Label text shown next to the icon. Required for `extended` variant |
+| `variant` | `regular` `mini` `extended` | `regular` | Size and shape variant |
+| `backgroundColor` | `string` | `#6750A4` | Background color of the button |
+| `foregroundColor` | `string` | `#FFFFFF` | Color applied to the label text |
+| `elevation` | `number` | `6` | Android shadow elevation |
+| `boxShadow` | `{ color, offsetX?, offsetY?, blurRadius? }` | — | iOS shadow config |
+| `style` | `ViewStyle` | — | Additional styles applied to the button |
+ 
+---
+
 ### `Wrap`
 
 Flows children into multiple lines when they overflow. Equivalent to Flutter's `Wrap`.
